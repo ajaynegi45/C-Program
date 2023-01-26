@@ -4,6 +4,8 @@
 void user();
 int sum(int x, int y);
 int sub(int x, int y);
+int multiply(int x, int y);
+int divide(int x, int y);
 
 //  calculation Function  Defination
 int sum(int x, int y){
@@ -12,9 +14,17 @@ return x +y;
 int sub(int x, int y){
 return x-y;
 }
+int multiply(int x, int y){
+return x*y;
+}
+int divide(int x, int y){
+return x/y;
+}
 void user(){
     std::cout<<"\nEnter 1 for Add: ";
     std::cout<<"\nEnter 2 for Sub: ";
+    std::cout<<"\nEnter 3 for Multiply: ";
+    std::cout<<"\nEnter 4 for Divide ";
     std::cout<<"\nEnter your Choice: ";
 }
 
@@ -24,7 +34,7 @@ int main(){
     int choice = 0;
     std::cin>>choice;
 
-    while(choice !=1 && choice !=2){
+    while(choice !=1 && choice !=2 && choice !=3 && choice !=4){
         std::cout<<"\nYou have enter worng choice: \n";
         user();
         std::cin>>choice;
@@ -44,6 +54,14 @@ int main(){
 
     case 2:
             std::cout<<"Answer is : "<<sub(a,b)<<std::endl;
+        break;
+
+    case 3:
+            std::cout<<"Answer is : "<<multiply(a,b)<<std::endl;
+        break;
+
+    case 4:
+            std::cout<<"Answer is : "<<divide(a,b)<<std::endl;
         break;
     
     default:
