@@ -27,7 +27,10 @@ int main(){
 
                 if(left == 0){
                     printf("Try after 24hr\n\n");}
+            printf("Left is %d",left);
+
             }
-        } 
+
+                    } 
     return 0;
 }
